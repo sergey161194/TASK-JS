@@ -10,13 +10,20 @@ const a = 5
 const b = 10
 
 if (b > a) {
+  let c = 2
   c = a + b + c
   // ДО: ReferenceError: Cannot access 'c' before initialization
   // ПОСЛЕ: Нет ошибки
-  let c = 2
+
   console.log(c)
   // 17
 }
 
 console.log(c)
 // Uncaught ReferenceError: c is not defined
+
+
+// 1 К "C" происходит присвоение до инициализации
+// 2 Переменная "c" имеет значение undefined, но оно не создано в глобальной области
+// видимости она создана только в блоке и области видимости ее
+// ограничена блоком if
