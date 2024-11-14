@@ -17,3 +17,9 @@ const objectWithNumbers = {
 const result = mult(objectWithNumbers)
 console.log(result)
 // 300
+
+
+function mult(obj) {
+  const { x, y, z } = obj; // Деструктурируем свойства сразу из obj
+  return x * y * z; // Возвращаем произведение
+}
